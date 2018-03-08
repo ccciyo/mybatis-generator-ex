@@ -34,7 +34,7 @@ resources/generatorConfig.xml
     <context id="DB2Tables" targetRuntime="MyBatis3Simple">
         <commentGenerator type="com.ccciyo.mybatis.CommentGenerator"/>
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://127.0.0.1:3306/test"
+                        connectionURL="jdbc:mysql://127.0.0.1:3306/test?useInformationSchema=true&amp;productuseUnicode=true&amp;characterEncoding=utf-8"
                         userId="root"
                         password="root">
         </jdbcConnection>

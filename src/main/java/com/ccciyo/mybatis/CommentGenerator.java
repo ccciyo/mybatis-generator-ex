@@ -12,6 +12,10 @@ public class CommentGenerator extends DefaultCommentGenerator {
         super();
     }
 
+    @Override
+    public void addJavaFileComment(CompilationUnit compilationUnit) {
+        super.addJavaFileComment(compilationUnit);
+    }
 
     public void addFieldComment(Field field, IntrospectedTable introspectedTable, IntrospectedColumn introspectedColumn) {
         addComment(field, introspectedColumn.getRemarks());
@@ -21,7 +25,6 @@ public class CommentGenerator extends DefaultCommentGenerator {
 
     @Override
     public void addModelClassComment(TopLevelClass topLevelClass, IntrospectedTable introspectedTable) {
-        topLevelClass.addJavaDocLine(introspectedTable.getRemarks());
         addComment(topLevelClass, introspectedTable.getRemarks());
     }
 
